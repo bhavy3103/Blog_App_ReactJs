@@ -2,7 +2,11 @@ import Feed from './Feed';
 import { useStoreState } from 'easy-peasy';
 
 const Home = ({ isLoading, fetchError }) => {
-    const searchResults = useStoreState((state) => state.searchResults);
+    // const searchResults = useStoreState((state) => state.searchResults);
+    // console.log(searchResults);
+    //store all the posts from the localstage 
+    const searchResults = JSON.parse(localStorage.getItem('posts'));
+    // console.log(searchResults);
 
     return (
         <main className="Home">
